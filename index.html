@@ -1,0 +1,18 @@
+import random
+import time
+import os
+
+# Ekranı temizle
+os.system('cls' if os.name == 'nt' else 'clear')
+
+# Karakterler
+chars = "01" 
+
+try:
+    while True:
+        # Rastgele bir satır oluştur
+        line = "".join([random.choice(chars) for _ in range(80)])
+        print(f"\033[32m{line}\033[0m") # Yeşil renk kodu
+        time.sleep(0.05)
+except KeyboardInterrupt:
+    print("\nProgram durduruldu.")
